@@ -1,0 +1,13 @@
+<h1>
+    <div>
+        {{ firstData | category }}  
+    </div>
+</h1>
+
+<section>  
+       
+        <app-details  *ngFor="let i of firstData" 
+                       [mediaInput]="i"
+                       (delete)="onMediaInputDelete($event)" >
+        </app-details>
+</section>

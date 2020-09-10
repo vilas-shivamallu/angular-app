@@ -1,0 +1,53 @@
+div.button{
+    display: flex;
+}
+.details-card{
+    min-width: 20%;
+    min-height: 200px;
+    background-color: #302b2b2d;
+    
+    border: 2px black dotted;  
+    color: #ffffff;
+    display: block;
+    padding: 4px;
+    margin: 8px;
+    font-size: .8em;
+    border-radius: 4px;
+  
+}.details-card:hover{
+    transform: scale(1.15);
+    color: #000000 ; 
+    border: 2px rgb(255, 255, 255) dotted;
+    background-color: skyblue;
+}
+.card-in{
+    display: grid;
+    justify-content: start;
+}
+.young {
+    width: 20px;
+    height: 20px;
+    fill: black;
+  }
+  .young.is-young {
+      fill: #37ad79;
+  }
+  .young.is-young-hovering {
+      fill: #45bf94;
+  }
+  .young.is-young.is-young-hovering {
+      fill: #ec4342;
+  }
+button.delete{
+    align-self: flex-end;
+    height: 24px;
+    font-style: italic;
+    border: 2px dotted black;
+    background: salmon;
+    margin: 0px 10px ;
+}
+button.delete:hover{
+    color: whitesmoke;
+    border: 2px dotted salmon;
+    background: black;
+}

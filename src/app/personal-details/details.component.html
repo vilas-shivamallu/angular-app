@@ -1,0 +1,12 @@
+<div class="details-card">
+    <h1>{{mediaInput.name | uppercase}}</h1>
+    <div class="card-in">
+        <h3>{{mediaInput.dob | date }}</h3>
+        <h3>{{mediaInput.category}}</h3>
+    </div>
+    DOJ:
+    <div class="button">
+     <button class="success">{{mediaInput.doj | date}}</button>
+    <button (click)='onDelete()' class="delete">Delete</button>
+    </div>
+</div>
