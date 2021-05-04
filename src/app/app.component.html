@@ -1,11 +1,12 @@
 <section>
-    <h1>Employee Data</h1>  
+    <h1>Employee Data</h1>    
 </section>
+
 &nbsp;
 <nav>
-  <a class="button" routerLink="/">home</a> | 
-  <a class="button" routerLink="/details-list">List All Employees</a> |
+  <a class="button" routerLink="/details-list">List All Employees</a> 
   <a class="button" routerLink="/app-media-input-form">Add Employee</a> 
+  <a class="button" style="float: right;" >{{time | date}}</a> 
 </nav>
 <router-outlet></router-outlet>
 

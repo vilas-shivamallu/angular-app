@@ -1,29 +1,94 @@
 /* You can add global styles to this file, and also import other style files */
 body{
-    background: linear-gradient(90deg, #eb3349 0%, #F45C43 50%, rgba(252,176,69,1) 100%); 
-    /* background: #F45C43; */
+    background: #000000;
+    color: #dde3d3;
 }
-button.success{
+
+.approot {
+    align-items: center;
+    width: 80%;
+    margin: auto;
+    padding: 15px;
+    border: 0.5px #de8971 dotted;
+    border-radius: 0.5em;
+}
+.button {
+    border-radius: 0.1rem;
+    color: #dde3d3;
+    display: inline-block;
+    cursor: pointer;
+    padding: 6px 24px;
+    margin: 10px;
+}
+
+section > h1 {
+    color: #dde3d3;
+    font-size: 40px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+}
+a {
+    text-decoration: none;
+}
+
+button {
     align-self: flex-end;
     height: 24px;
+    color: #dde3d3;
     font-style: italic;
-    border: 2px dotted black;
-    background: rgb(114, 250, 171);
-    
+    border: 0.5px solid#0a043c;
+    background: #7b6079;
+    margin-right: 10px;
+    cursor: pointer;
 }
-button.success:disabled{
-    font-size: 0px;    
-    height: 0px;
-}
+
 button.success:hover{
-    color: whitesmoke;
-    border: 2px dotted rgb(114, 250, 175);
-    background: black;
+    color: #0a043c;
+    border: 2px solid #0a043c;
+    background: rgb(114, 250, 175);
+}
+button.delete:hover{
+    color: #0a043c;
+    border: 2px solid #0a043c;
+    background: salmon;
 }
 
 .error{
-    border : 2px white double;
-    color: white;
-    background-color: red;
+    padding: 10px;
+    color: red;
+    background-color: #0a043c;
+    border-radius: .5em;
+}
+
+.details-card{
+    justify-content: center;
+    min-width: 170px;
+    background-color: #de8971;
+    color: #0a043c;
+    display: block;
+    padding: 4px;
+    margin: 8px;
+    font-size: .8em;
     border-radius: 4px;
+    align-self: center;
+}
+
+.details-card:hover{
+    transform: scale(1.02);
+    /* color: #dde3d3;
+    background-color: #0a043c;
+    border: 2px rgb(255, 255, 255) dotted; */
+}
+
+.button:hover {
+    color:#de8971
+}
+
+input, select {
+    min-width: 200px;
+    height: 28px;
+    border-radius: .5em;
 }

@@ -1,50 +1,55 @@
 <section>
-<h3 style="color: white;">Enter Employee Details</h3>
-    <form [formGroup]="form"
-        (ngSubmit)="onSubmit(form.value)">
-    <table>
-        
-        <tr>
-            <td>
-                <label for="name"> *I am  : </label>
-            </td>
-            <td>
-            <input type="text" name="name" id="a=name" formControlName="name" placeholder="Name"/>
-            </td>
-        <td>
-            <div *ngIf="form.get('name').hasError('pattern')" class="error" >
-                Only alphanumericals and '-' is allowed :)
-            </div>
-        </td>
-        </tr>
-        <tr>
-            <td><label for="dob">*Date of Birth: </label></td>
-            <td><input type="date" name="dob" id="dob" formControlName="dob"></td>
-            <div *ngIf="form.get('dob').errors as dobErrors" class="error">
-                {{dobErrors.Er.error}}
-            </div>
-        </tr>
-        <tr>
-            <td><label for="category">*I am a/an :</label></td>
-            <td><select name="category" id="category" formControlName="category" required>
-                <option value="Scholar">Scholar</option>
-                <option value="Intern">Intern</option>
-                <option value="Dev">Dev</option>
-            </select>
-        </td>
-        </tr>
-        <tr>
-            <td><label for="doj">Date of Joining: </label></td>
-            <td><input type="date" name="doj" id="doj" formControlName="doj"></td>
+    <h2 style="color: white; padding-bottom: 20px;">Enter Employee Details</h2>
+        <form [formGroup]="form"
+            (ngSubmit)="onSubmit(form.value)">
+        <table>
             
-        </tr>
-        <tr>
-            <td></td>
+            <tr>
+                <td>
+                    <label for="name"> *I am  : </label>
+                </td>
+                <td>
+                <input type="text" name="name" id="a=name" formControlName="name" placeholder="Name"/>
+                </td>
             <td>
-                <button type="submit" [disabled]="!form.valid" class="success" >
-                    Save </button>
+                <div *ngIf="form.get('name').hasError('pattern')" class="error" >
+                    Only alphanumericals and '-' is allowed :)
+                </div>
             </td>
-        </tr>
-    </table>         
-</form>
-</section>
+            </tr>
+            <tr>
+                <td><label for="dob">*Date of Birth: </label></td>
+                <td><input type="date" name="dob" id="dob" formControlName="dob"></td>
+                <div *ngIf="form.get('dob').errors as dobErrors" class="error">
+                    {{dobErrors.Er.error}}
+                </div>
+            </tr>
+            <tr>
+                <td><label for="category">*I am a/an :</label></td>
+                <td><select name="category" id="category" formControlName="category" required>
+                    <option value="Scholar">Scholar</option>
+                    <option value="Intern">Intern</option>
+                    <option value="Dev">Dev</option>
+                </select>
+            </td>
+            </tr>
+            <tr>
+                <td><label for="doj">Date of Joining: </label></td>
+                <td><input type="date" name="doj" id="doj" formControlName="doj"></td>
+                
+            </tr>
+            <tr>
+                <td>
+                    
+                </td>
+                <td>
+                    <button routerLink="/">Back</button>
+                    <button type="submit" class="success"> Save </button>
+                </td>
+                <td>
+                    
+                </td>
+            </tr>
+        </table>         
+    </form>
+    </section>

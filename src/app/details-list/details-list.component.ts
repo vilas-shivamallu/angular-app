@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { CategoryPipe } from '../pipes/category.pipe';
-import { DetailsListService } from '../details-list.service';
+import { Observable } from "rxjs";
+import { DetailsListService } from '../services/details-list.service';
 
 @Component({
     selector: 'app-details-list',
@@ -12,7 +13,14 @@ export class DetailsListComponent implements OnInit{
   
   constructor(private detailsListService : DetailsListService) {}
   ngOnInit(){
-    this.firstData=this.detailsListService.get();
+    this.detailsListService.get()
+    .subscribe(
+      data => this.firstData=data,
+      err => console.log(err),
+      () => console.log("All good")
+    );
+    //this.firstData=this.detailsListService.get();
+   
   }
   onMediaInputDelete(mediaInput) { 
       this.detailsListService.delete(mediaInput);

@@ -1,0 +1,12 @@
+<section>
+<div class="details-card">
+    <h1>{{mediaInput.name | uppercase}}</h1>
+    <div class="card-in">
+        <h3>DOB: {{mediaInput.dob | date }}</h3>
+        <h3>DOJ: {{mediaInput.doj | date}}</h3>
+        <h3>{{mediaInput.category}}</h3>
+    </div>
+    <button routerLink="/">Back</button>
+    <button routerLink="/app-edit-employee/{{mediaInput.id}}">edit</button>
+</div>
+</section>
