@@ -6,6 +6,19 @@
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <script>
+    var swa = {
+        pubToken: 'f331def7-cd2e-43d9-b721-6b779ae2360b',
+        baseUrl: 'https://events-innovision.cfapps.sap.hana.ondemand.com/tracker/',
+        owner: null 
+        //set this to a function that returns the identifier of the tracked user
+    };
+    (function(){
+        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+        g.type='text/javascript'; g.defer=true; g.async=true; g.src=swa.baseUrl+'js/track.js';
+        s.parentNode.insertBefore(g,s);
+     })();
+</script>
 </head>
 <body>
   <div class="approot">
