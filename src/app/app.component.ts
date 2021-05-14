@@ -13,5 +13,6 @@ export class AppComponent {
   onFunctionClick() {
     if (this.errorVariable || this.errorVariable.error) {
       console.log("not defined");
+    }
   }
 }
