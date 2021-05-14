@@ -15,7 +15,7 @@ export class PersonalDetailsComponent{
     private route: ActivatedRoute) {
     }
 onDelete(){
-    console.log('onDelete');
+    console.log(onDelete);
     this.delete.emit(this.mediaInput);
 }
 
