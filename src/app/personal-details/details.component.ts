@@ -10,13 +10,16 @@ import { ActivatedRoute } from '@angular/router';
 export class PersonalDetailsComponent{
 @Input()  mediaInput;
 @Output() delete = new EventEmitter();
-
+errorVariable;
   constructor(private detailsListService: DetailsListService,
     private route: ActivatedRoute) {
     }
 onDelete(){
     console.log('onDelete');
     this.delete.emit(this.mediaInput);
+    if (this.errorVariable || this.errorVariable.error) {
+        console.log("not defined");
+    }
 }
 
 }
