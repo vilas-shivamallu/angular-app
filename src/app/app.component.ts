@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'my-app';
   time = new Date().toLocaleDateString();
+  
+  errorVariable;
+
+  onFunctionClick() {
+    if (this.errorVariable || this.errorVariable.error) {
+      console.log("not defined");
+  }
 }
